@@ -178,7 +178,7 @@ export class LayerManager {
   addVenueMarkers(name: string, venues: VenueMarker[]): void {
     this.removeVenueMarkers(name)
     const multiIcon = L.icon({
-      iconUrl: '/icon-multi.svg',
+      iconUrl: `${import.meta.env.BASE_URL}icon-multi.svg`,
       iconSize: [56, 42],
       iconAnchor: [28, 38], // centre between the two mug bases
       popupAnchor: [0, -38],

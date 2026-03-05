@@ -50,7 +50,7 @@ export function mountUploadPanel(map: LeafletMap, store: VenueStore): void {
     <div class="upload-panel__legend">
       ${LEGEND_ENTRIES.map(e => legendRow(e.colour, e.label)).join('')}
       <div class="legend-row">
-        <img src="/icon-multi.svg" class="legend-icon legend-icon--multi" alt="multiple visits" />
+        <img src="${import.meta.env.BASE_URL}icon-multi.svg" class="legend-icon legend-icon--multi" alt="multiple visits" />
         <span>Multiple checkins</span>
       </div>
     </div>
