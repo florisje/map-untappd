@@ -95,7 +95,7 @@ Your checkin data never leaves your browser. The CSV is parsed client-side and h
 
 ## Built with
 
-This project was built collaboratively with [Claude Code](https://claude.ai/claude-code), Anthropic's AI coding assistant.
+This project was built collaboratively with [Claude Code](https://claude.com/product/claude-code), Anthropic's AI coding assistant.
 
 ## Disclaimer
 
