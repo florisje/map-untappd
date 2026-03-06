@@ -12,9 +12,9 @@ import { mountUploadPanel } from './upload'
 ;(window as unknown as Record<string, unknown>).L = L
 await import('leaflet.heat')
 
-// Continental USA
-const DEFAULT_CENTER: [number, number] = [39.5, -98.35]
-const DEFAULT_ZOOM = 3
+// US + Europe in view
+const DEFAULT_CENTER: [number, number] = [45, -30]
+const DEFAULT_ZOOM = 2
 
 const mapManager = new MapManager('map', DEFAULT_CENTER, DEFAULT_ZOOM)
 const layerManager = new LayerManager(mapManager.map)

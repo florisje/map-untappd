@@ -1,6 +1,6 @@
 import { singleIconDataUrl } from './layers'
 import type { BeerColour } from './layers'
-import type { Map as LeafletMap } from 'leaflet'
+import L, { type Map as LeafletMap } from 'leaflet'
 import type { VenueStore } from './venue-store'
 import { parseCSV } from './csv-parse'
 
@@ -103,7 +103,11 @@ export function mountUploadPanel(map: LeafletMap, store: VenueStore): void {
         // Reset file input so the same file can be re-uploaded
         fileInput.value = ''
 
-        // Close panel and refresh the map layer
+        // Zoom to fit all checkins, then close panel
+        const points = result.checkins.map(c => L.latLng(c.venue_lat, c.venue_lng))
+        if (points.length > 0) {
+          map.fitBounds(L.latLngBounds(points), { padding: [40, 40] })
+        }
         panel.classList.remove('upload-panel--open')
         map.fire('moveend')
       } catch (err) {
