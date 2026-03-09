@@ -32,7 +32,7 @@ export function mountUploadPanel(map: LeafletMap, store: VenueStore): void {
   // Hamburger toggle button
   const toggle = document.createElement('button')
   toggle.id = 'upload-toggle'
-  toggle.title = 'Upload checkins'
+  toggle.title = 'Load checkins'
   toggle.innerHTML = '<span></span><span></span><span></span>'
   document.body.appendChild(toggle)
 
@@ -40,10 +40,10 @@ export function mountUploadPanel(map: LeafletMap, store: VenueStore): void {
   panel.id = 'upload-panel'
   panel.innerHTML = `
     <div class="upload-panel__title">Map your Untappd checkins</div>
-    <p class="upload-panel__description">Upload your Untappd CSV export to see your checkins on the map. Go to <strong>Account → Beer History</strong> on untappd.com to download it. Requires an <strong>Untappd Insider</strong> subscription.</p>
+    <p class="upload-panel__description">Load your Untappd CSV export to see your checkins on the map. Go to <strong>Account → Beer History</strong> on untappd.com to download it. Requires an <strong>Untappd Insider</strong> subscription.</p>
     <p class="upload-panel__privacy">Your data stays in your browser — nothing is uploaded to any server.</p>
     <input id="upload-file" type="file" accept=".csv" />
-    <button id="upload-btn">Upload</button>
+    <button id="upload-btn">Load</button>
     <div id="upload-status" class="upload-panel__status"></div>
     <hr class="upload-panel__divider" />
     <div class="upload-panel__section-label">Legend</div>
